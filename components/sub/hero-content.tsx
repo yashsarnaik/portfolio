@@ -20,7 +20,7 @@ export const HeroContent = () => {
       gradient: "bg-gradient-to-r from-orange-500 to-red-500"
     },
     { 
-      text: "a Backend engineer", 
+      text: "a Backend developer", 
       gradient: "bg-gradient-to-r from-purple-500 to-pink-500"
     }
   ];
