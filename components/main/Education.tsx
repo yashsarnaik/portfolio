@@ -27,7 +27,7 @@ export const Education = () => {
                 whileHover={{ scale: 1.03 }}
               >
                 <h3 className="text-xl font-bold">B.Tech in Computer Science(Data Science)</h3>
-                <p className="text-lg mt-1">Dr.D.Y Patil Pratishthan's College of Engineering, Kolhapur</p>
+                <p className="text-lg mt-1">Dr.D.Y Patil Pratishthan &apos;s College of Engineering, Kolhapur</p>
                 <p className="mt-4 text-gray-300 leading-relaxed">
                   I have successfully completed a B.Tech in Computer Science with a specialization in Data Science, equipping me with a strong foundation in programming, data analysis, and advanced algorithms.
                 </p>
@@ -102,7 +102,7 @@ export const Education = () => {
               </span>
             </div>
             <p className="text-gray-300 text-sm">
-              Dr.D.Y Patil Pratishthan &apos; College of Engineering, Kolhapur
+              Dr.D.Y Patil Pratishthan &apos;s College of Engineering, Kolhapur
             </p>
             <p className="mt-2 text-gray-400 text-xs">
               Completed B.Tech in Computer Science with Data Science specialization, developing expertise in programming, data analysis, and machine learning.
