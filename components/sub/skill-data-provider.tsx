@@ -30,6 +30,9 @@ export const SkillDataProvider = ({
 
   const animationDelay = 0.1;
 
+  // Remove the /skills/ prefix from the path if images are directly in public
+  const imagePath = src.startsWith('/') ? src : `/${src}`;
+
   return (
     <motion.div
       ref={ref}
@@ -39,7 +42,13 @@ export const SkillDataProvider = ({
       custom={index}
       transition={{ delay: index * animationDelay }}
     >
-      <Image src={`/skills/${src}`} width={width} height={height} alt={name} />
+      <Image 
+        src={imagePath}
+        width={width} 
+        height={height} 
+        alt={name}
+        className="hover:scale-110 transition-transform duration-300"
+      />
     </motion.div>
   );
 };
