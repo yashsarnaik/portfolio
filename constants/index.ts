@@ -331,9 +331,9 @@ export const FOOTER_DATA = [
     data: [
 
       {
-        name: "Learning about me",
+        name: "Explore more projects at HuggingFace",
         icon: null,
-        link: "https://example.com",
+        link: "https://huggingface.co/yashsarnaik23"
       },
       {
         name: "Contact Me",

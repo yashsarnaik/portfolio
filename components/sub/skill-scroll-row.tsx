@@ -5,23 +5,23 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 type SkillDataProviderProps = {
-  image: string;
-  skill_name: string;
-  width: number;
-  height: number;
-  index: number;
+  readonly image: string;
+  readonly skill_name: string;
+  readonly width: number;
+  readonly height: number;
+  readonly index: number;
 };
 
 type SkillScrollRowProps = {
-  skills: SkillDataProviderProps[];
+  skills: readonly SkillDataProviderProps[];  // Updated to accept readonly array
   direction?: 'left' | 'right';
   speed?: number;
 };
 
 const SkillItem = ({ image, skill_name, width, height }: SkillDataProviderProps) => {
   return (
-    <div className="flex-shrink-0 px-8"> {/* Increased horizontal padding for spacing */}
-      <div className="w-20 h-20 flex items-center justify-center"> {/* Fixed size container */}
+    <div className="flex-shrink-0 px-8">
+      <div className="w-20 h-20 flex items-center justify-center">
         <Image 
           src={image}
           width={width} 
@@ -35,7 +35,6 @@ const SkillItem = ({ image, skill_name, width, height }: SkillDataProviderProps)
 };
 
 export const SkillScrollRow = ({ skills, direction = 'left', speed = 20 }: SkillScrollRowProps) => {
-  // Reduce duration to increase speed (smaller number = faster)
   const duration = 15 * (100 / speed);
   
   return (
@@ -51,13 +50,11 @@ export const SkillScrollRow = ({ skills, direction = 'left', speed = 20 }: Skill
           repeatType: "loop",
         }}
       >
-        {/* Original set of items */}
         <div className="flex">
           {skills.map((skill, i) => (
             <SkillItem key={`${skill.skill_name}-${i}`} {...skill} index={i} />
           ))}
         </div>
-        {/* Duplicated set for seamless loop */}
         <div className="flex">
           {skills.map((skill, i) => (
             <SkillItem key={`${skill.skill_name}-duplicate-${i}`} {...skill} index={i} />
@@ -67,4 +64,3 @@ export const SkillScrollRow = ({ skills, direction = 'left', speed = 20 }: Skill
     </div>
   );
 };
-
