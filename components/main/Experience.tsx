@@ -2,6 +2,11 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import Image from 'next/image';
+
+
+
+
 
 export const Experience = () => {
   return (
@@ -20,20 +25,20 @@ export const Experience = () => {
             </header>
             <p className="card__job-title">AI/ML Developer👨‍💻</p>
             <p className="card__job-description">
-            I'm working as an AI/ML developer creating some amazing Gen-ai apps using the state of the art LLMs and embedding models and creating APIs using apps like Flask and Fast-API. 
+            I&apos;m working as an AI/ML developer creating some amazing Gen-ai apps using the state of the art LLMs and embedding models and creating APIs using apps like Flask and Fast-API. 
             And creating data-driven business solutions using Postgres and Firebase.
-            With my Knowledge in AI/ML and Deep learning I'm always up to contribute to the community.
+            With my Knowledge in AI/ML and Deep learning I&apos;m always up to contribute to the community.
             </p>
           </section>
           <footer className="card__footer">
             <div className="card__job-summary">
               <div className="card__job-icon">
-                <img src="/onpoint.jpeg" alt="onPoint Software Services Logo" height={40} width={40} />
+                <Image src="/onpoint.jpeg" alt="onPoint Software Services Logo" width={40} height={40} />
               </div>
               <div className="card__job">
-                <p className="card__job-title">
-                  onPoint Software Services <br />
-                </p>
+              <p className="card__job-title">
+            onPoint Software Services <br />
+              </p>
               </div>
             </div>
             <a href="https://www.onpointsoft.com" className="card__btn" target="_blank" rel="noopener noreferrer">View</a>
