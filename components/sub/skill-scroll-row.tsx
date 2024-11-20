@@ -4,21 +4,20 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-type SkillDataProviderProps = {
-  readonly image: string;
+type SkillData = {
   readonly skill_name: string;
+  readonly image: string;
   readonly width: number;
   readonly height: number;
-  readonly index: number;
 };
 
 type SkillScrollRowProps = {
-  skills: readonly SkillDataProviderProps[];  // Updated to accept readonly array
+  skills: readonly SkillData[];  // Changed from SkillDataProviderProps to SkillData
   direction?: 'left' | 'right';
   speed?: number;
 };
 
-const SkillItem = ({ image, skill_name, width, height }: SkillDataProviderProps) => {
+const SkillItem = ({ image, skill_name, width, height }: SkillData) => {
   return (
     <div className="flex-shrink-0 px-8">
       <div className="w-20 h-20 flex items-center justify-center">
@@ -52,12 +51,12 @@ export const SkillScrollRow = ({ skills, direction = 'left', speed = 20 }: Skill
       >
         <div className="flex">
           {skills.map((skill, i) => (
-            <SkillItem key={`${skill.skill_name}-${i}`} {...skill} index={i} />
+            <SkillItem key={`${skill.skill_name}-${i}`} {...skill} />
           ))}
         </div>
         <div className="flex">
           {skills.map((skill, i) => (
-            <SkillItem key={`${skill.skill_name}-duplicate-${i}`} {...skill} index={i} />
+            <SkillItem key={`${skill.skill_name}-duplicate-${i}`} {...skill} />
           ))}
         </div>
       </motion.div>
