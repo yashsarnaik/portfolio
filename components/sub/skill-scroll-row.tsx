@@ -1,7 +1,7 @@
 "use client";
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
 import Image from 'next/image';
+
 
 type SkillData = {
   readonly skill_name: string;
@@ -32,51 +32,50 @@ const SkillItem = ({ image, skill_name, width, height }: SkillData) => {
   );
 };
 
-export const SkillScrollRow = ({ skills, direction = 'left', speed = 20 }: SkillScrollRowProps) => {
-  const [adjustedSpeed, setAdjustedSpeed] = useState(speed);
-  const [duration, setDuration] = useState(15); // Default duration
-
-  useEffect(() => {
-    const handleResize = () => {
-      const isDesktop = window.innerWidth > 1024; // Example breakpoint for desktop
-      const newSpeed = isDesktop ? 10 : speed; // Adjust speed for desktop
-      setAdjustedSpeed(newSpeed);
-
-      const baseDuration = 30; // Increased base duration
-      const viewportWidth = window.innerWidth;
-      const calculatedDuration = baseDuration * (viewportWidth / 1000) * (100 / newSpeed);
-      setDuration(calculatedDuration);
-    };
-
-    handleResize(); // Initial call to set the speed and duration
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [speed]);
-
+export const SkillScrollRow = ({ skills, direction = 'left' }: SkillScrollRowProps) => {
   return (
-    <div className="relative overflow-hidden py-4 bg-transparent">
-      <motion.div 
-        className="flex whitespace-nowrap"
-        initial={{ x: direction === 'left' ? '0%' : '-100%' }}
-        animate={{ x: direction === 'left' ? '-100%' : '0%' }}
-        transition={{
-          duration,
-          repeat: Infinity,
-          ease: "linear",
-          repeatType: "loop",
-        }}
-      >
-        <div className="flex">
-          {skills.map((skill, i) => (
-            <SkillItem key={`${skill.skill_name}-${i}`} {...skill} />
-          ))}
+    <>
+      <style jsx global>{`
+        @keyframes scroll {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
+        }
+
+        .scroll-container {
+          animation: scroll 10s linear infinite;
+        }
+
+        @media (min-width: 1024px) {
+          .scroll-container {
+            animation: scroll 15s linear infinite;
+          }
+        }
+
+        .scroll-reverse {
+          animation-direction: reverse;
+        }
+      `}</style>
+
+      <div className="relative overflow-hidden py-4 bg-transparent">
+        <div 
+          className={`flex whitespace-nowrap scroll-container ${direction === 'right' ? 'scroll-reverse' : ''}`}
+        >
+          <div className="flex">
+            {skills.map((skill, i) => (
+              <SkillItem key={`${skill.skill_name}-${i}`} {...skill} />
+            ))}
+          </div>
+          <div className="flex">
+            {skills.map((skill, i) => (
+              <SkillItem key={`${skill.skill_name}-duplicate-${i}`} {...skill} />
+            ))}
+          </div>
         </div>
-        <div className="flex">
-          {skills.map((skill, i) => (
-            <SkillItem key={`${skill.skill_name}-duplicate-${i}`} {...skill} />
-          ))}
-        </div>
-      </motion.div>
-    </div>
+      </div>
+    </>
   );
 };
