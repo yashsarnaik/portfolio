@@ -29,7 +29,7 @@ export const Education = () => {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <h3 className="text-xl font-bold">B.Tech in Computer Science(Data Science)</h3>
-                  <p className="text-lg mt-1">Dr.D.Y Patil Pratishthan's College of Engineering, Kolhapur</p>
+                  <p className="text-lg mt-1">Dr.D.Y Patil Pratishthan &apos; College of Engineering, Kolhapur</p>
                   <p className="mt-4 text-gray-300 leading-relaxed">
                   I have successfully completed a B.Tech in Computer Science with a specialization in Data Science, equipping me with a strong foundation in programming, data analysis, and advanced algorithms. Through my academic journey, I developed expertise in Python, R, machine learning, deep learning, and visualization tools.
                   </p>

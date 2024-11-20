@@ -3,8 +3,7 @@ import { SkillScrollRow } from "@/components/sub/skill-scroll-row";
 import {
   BACKEND_SKILL,
   FRONTEND_SKILL,
-  FULLSTACK_SKILL,
-  OTHER_SKILL,
+
   SKILL_DATA,
 } from "@/constants";
 
@@ -20,8 +19,6 @@ export const Skills = () => {
         <SkillScrollRow skills={SKILL_DATA} direction="left" speed={25} />
         <SkillScrollRow skills={FRONTEND_SKILL} direction="right" speed={20} />
         <SkillScrollRow skills={BACKEND_SKILL} direction="left" speed={30} />
-        <SkillScrollRow skills={FULLSTACK_SKILL} direction="right" speed={25} />
-        <SkillScrollRow skills={OTHER_SKILL} direction="left" speed={20} />
       </div>
 
       <div className="w-full h-full absolute">

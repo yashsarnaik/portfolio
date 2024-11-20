@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { LINKS, NAV_LINKS, SOCIALS } from "@/constants";
+import { NAV_LINKS, SOCIALS } from "@/constants";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,7 +33,7 @@ export const Navbar = () => {
 
           {/* Desktop Navigation Links */}
           <div className="hidden sm:flex w-full max-w-[500px] h-full items-center justify-between md:mr-20">
-            <div className="flex items-center justify-between w-full h-auto border-[rgba(112,66,248,0.38)] bg-[rgba(3,0,20,0.37)] px-[20px] py-[10px] rounded-full text-gray-200">
+            <div className="flex items-center justify-between w-full h-auto border-[rgba(112,66,248,0.38)] bg-[rgba(3,0,20,0.37)] px-[20px] py-[10px] rounded-full text-gray-200 space-x-4" >
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.title}
@@ -45,14 +45,7 @@ export const Navbar = () => {
               ))}
 
               {/* Source Code Link */}
-              <Link
-                href={LINKS.sourceCode}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
-              >
-                Source Code
-              </Link>
+
             </div>
           </div>
 
@@ -137,15 +130,7 @@ export const Navbar = () => {
 
                 {/* Source Code Link */}
                 <li>
-                  <Link
-                    href={LINKS.sourceCode}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    onClick={() => setIsMenuOpen(false)}
-                    className="text-lg font-medium cursor-pointer hover:text-[rgb(112,66,248)] transition"
-                  >
-                    Source Code
-                  </Link>
+
                 </li>
               </ul>
             </div>
