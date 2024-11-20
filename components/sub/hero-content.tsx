@@ -57,7 +57,7 @@ export const HeroContent = () => {
             >
               {words[currentWord].text}
             </motion.span>
-            <span>creating amazing things.</span>
+            <span>creating amazing apps.</span>
           </div>
         </motion.div>
 
