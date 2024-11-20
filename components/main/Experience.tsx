@@ -23,7 +23,7 @@ export const Experience = () => {
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2">AI/ML Developer 👨‍💻</h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                I'm working as an AI/ML developer creating some amazing Gen-ai apps using the state of the art LLMs and embedding models and creating APIs using apps like Flask and Fast-API. 
+                I&apos;m working as an AI/ML developer creating some amazing Gen-ai apps using the state of the art LLMs and embedding models and creating APIs using apps like Flask and Fast-API. 
                 And creating data-driven business solutions using Postgres and Firebase.
                 With my Knowledge in AI/ML and Deep learning I'm always up to contribute to the community.
               </p>

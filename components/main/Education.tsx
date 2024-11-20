@@ -102,7 +102,7 @@ export const Education = () => {
               </span>
             </div>
             <p className="text-gray-300 text-sm">
-              Dr.D.Y Patil Pratishthan's College of Engineering, Kolhapur
+              Dr.D.Y Patil Pratishthan &apos; College of Engineering, Kolhapur
             </p>
             <p className="mt-2 text-gray-400 text-xs">
               Completed B.Tech in Computer Science with Data Science specialization, developing expertise in programming, data analysis, and machine learning.
