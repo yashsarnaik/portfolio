@@ -19,14 +19,14 @@ type SkillScrollRowProps = {
 
 const SkillItem = ({ image, skill_name, width, height }: SkillData) => {
   return (
-    <div className="flex-shrink-0 px-8">
-      <div className="w-20 h-20 flex items-center justify-center">
+    <div className="flex-shrink-0 px-4 sm:px-8">
+      <div className="w-14 h-14 sm:w-20 sm:h-20 flex items-center justify-center">
         <Image 
           src={image}
           width={width} 
           height={height} 
           alt={skill_name}
-          className="hover:scale-110 transition-transform duration-300 object-contain"
+          className="hover:scale-110 transition-transform duration-300 object-contain w-10 h-10 sm:w-auto sm:h-auto"
         />
       </div>
     </div>

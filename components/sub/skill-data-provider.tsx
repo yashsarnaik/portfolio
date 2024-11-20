@@ -47,7 +47,7 @@ export const SkillDataProvider = ({
         width={width} 
         height={height} 
         alt={name}
-        className="hover:scale-110 transition-transform duration-300"
+        className="hover:scale-110 transition-transform duration-300 w-10 h-10 sm:w-auto sm:h-auto"
       />
     </motion.div>
   );
