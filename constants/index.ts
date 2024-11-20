@@ -7,6 +7,7 @@ import {
   RxLinkedinLogo,
 } from "react-icons/rx";
 
+
 export const SKILL_DATA = [
   {
     skill_name: "HTML",
@@ -346,8 +347,9 @@ export const FOOTER_DATA = [
 export const NAV_LINKS = [
   {
     title: "Home",
-    link: "#about-me",
+    link: "#home",
   },
+  
   {
     title: "Skills",
     link: "#skills",
@@ -355,6 +357,14 @@ export const NAV_LINKS = [
   {
     title: "Projects",
     link: "#projects",
+  },
+  {
+    title:"Education",
+    link: "#education"
+  },
+  {
+    title:"Experience",
+    link: "#experience"
   },
 ] as const;
 
