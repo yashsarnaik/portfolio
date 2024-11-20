@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
@@ -34,9 +34,24 @@ const SkillItem = ({ image, skill_name, width, height }: SkillData) => {
 };
 
 export const SkillScrollRow = ({ skills, direction = 'left', speed = 20 }: SkillScrollRowProps) => {
-  const viewportWidth = window.innerWidth;
-  const baseDuration = 15; // Base duration in seconds
-  const duration = baseDuration * (viewportWidth / 1000) * (100 / speed);
+  const [duration, setDuration] = useState(15); // Default duration
+
+  useEffect(() => {
+    // Calculate duration based on viewport width only after component mounts
+    const baseDuration = 15;
+    const viewportWidth = window.innerWidth;
+    const calculatedDuration = baseDuration * (viewportWidth / 1000) * (100 / speed);
+    setDuration(calculatedDuration);
+
+    const handleResize = () => {
+      const newViewportWidth = window.innerWidth;
+      const newDuration = baseDuration * (newViewportWidth / 1000) * (100 / speed);
+      setDuration(newDuration);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [speed]);
 
   return (
     <div className="relative overflow-hidden py-4 bg-transparent">
