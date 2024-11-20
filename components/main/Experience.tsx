@@ -25,7 +25,7 @@ export const Experience = () => {
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                 I&apos;m working as an AI/ML developer creating some amazing Gen-ai apps using the state of the art LLMs and embedding models and creating APIs using apps like Flask and Fast-API. 
                 And creating data-driven business solutions using Postgres and Firebase.
-                With my Knowledge in AI/ML and Deep learning I'm always up to contribute to the community.
+                With my Knowledge in AI/ML and Deep learning I&apos;m always up to contribute to the community.
               </p>
             </div>
             <div className="bg-gray-50 p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between">
