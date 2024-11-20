@@ -12,15 +12,15 @@ import {
 export const HeroContent = () => {
   const words = [
     { 
-      text: "a Gen-AI enthusiast", 
+      text: "a Gen-AI enthusiast" , 
       gradient: "bg-gradient-to-r from-blue-500 to-cyan-500"
     },
     { 
-      text: "an AI/ML developer", 
+      text: "an AI/ML developer" , 
       gradient: "bg-gradient-to-r from-orange-500 to-red-500"
     },
     { 
-      text: "a Backend developer", 
+      text: "a Backend developer" , 
       gradient: "bg-gradient-to-r from-purple-500 to-pink-500"
     }
   ];
@@ -45,7 +45,7 @@ export const HeroContent = () => {
           variants={slideInFromLeft(0.5)}
           className="flex flex-col gap-4 lg:gap-6 mt-4 lg:mt-6 text-3xl lg:text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
         >
-          <div className="flex flex-wrap items-center gap-x-4">
+          <div className="flex flex-wrap items-center gap-x-4 whitespace-nowrap">
             <span>I&apos;m Yash </span>
             <motion.span
               key={currentWord}
