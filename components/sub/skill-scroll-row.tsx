@@ -12,7 +12,7 @@ type SkillData = {
 };
 
 type SkillScrollRowProps = {
-  skills: readonly SkillData[];  // Changed from SkillDataProviderProps to SkillData
+  skills: readonly SkillData[];
   direction?: 'left' | 'right';
   speed?: number;
 };
@@ -34,8 +34,10 @@ const SkillItem = ({ image, skill_name, width, height }: SkillData) => {
 };
 
 export const SkillScrollRow = ({ skills, direction = 'left', speed = 20 }: SkillScrollRowProps) => {
-  const duration = 15 * (100 / speed);
-  
+  const viewportWidth = window.innerWidth;
+  const baseDuration = 15; // Base duration in seconds
+  const duration = baseDuration * (viewportWidth / 1000) * (100 / speed);
+
   return (
     <div className="relative overflow-hidden py-4 bg-transparent">
       <motion.div 
