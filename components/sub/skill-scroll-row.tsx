@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -34,21 +33,22 @@ const SkillItem = ({ image, skill_name, width, height }: SkillData) => {
 };
 
 export const SkillScrollRow = ({ skills, direction = 'left', speed = 20 }: SkillScrollRowProps) => {
+  const [adjustedSpeed, setAdjustedSpeed] = useState(speed);
   const [duration, setDuration] = useState(15); // Default duration
 
   useEffect(() => {
-    // Calculate duration based on viewport width only after component mounts
-    const baseDuration = 15;
-    const viewportWidth = window.innerWidth;
-    const calculatedDuration = baseDuration * (viewportWidth / 1000) * (100 / speed);
-    setDuration(calculatedDuration);
-
     const handleResize = () => {
-      const newViewportWidth = window.innerWidth;
-      const newDuration = baseDuration * (newViewportWidth / 1000) * (100 / speed);
-      setDuration(newDuration);
+      const isDesktop = window.innerWidth > 1024; // Example breakpoint for desktop
+      const newSpeed = isDesktop ? 10 : speed; // Adjust speed for desktop
+      setAdjustedSpeed(newSpeed);
+
+      const baseDuration = 30; // Increased base duration
+      const viewportWidth = window.innerWidth;
+      const calculatedDuration = baseDuration * (viewportWidth / 1000) * (100 / newSpeed);
+      setDuration(calculatedDuration);
     };
 
+    handleResize(); // Initial call to set the speed and duration
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, [speed]);
