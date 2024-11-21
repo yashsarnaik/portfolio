@@ -114,7 +114,7 @@ export const Education = () => {
             <div className="flex justify-between items-start mb-4">
               <h3 className="text-lg font-bold text-white">12th HSC</h3>
               <span className="bg-blue-500 text-white text-xs px-2 py-1 rounded">
-                July 2018 - May 2024
+                July 2018 - March 2020
               </span>
             </div>
             <p className="text-gray-300 text-sm">
