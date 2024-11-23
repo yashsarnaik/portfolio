@@ -13,7 +13,7 @@ export default function Home() {
         <Skills />
         <Experience />
         <Education />
-        <Encryption />
+
         <Projects />
       </div>
     </main>

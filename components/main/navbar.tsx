@@ -27,7 +27,7 @@ export const Navbar = () => {
               className="cursor-pointer hover:animate-slowspin"
             />
             <div className="font-bold ml-2 hidden sm:block text-gray-300">
-              Yash Sarnaik
+     
             </div>
           </Link>
 

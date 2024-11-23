@@ -220,21 +220,21 @@ export const PROJECTS = [
   {
     title: "Alzheimer's prediction using deep learning",
     description:
-      "An innovative machine learning system designed to predict early-onset Alzheimer disease using MRI brain scans and achieving 98% accuracy through a combination of deep learning and traditional ML techniques. The backend is built with Python and uses  for the deep learning pipeline, while the frontend employs Streamlit for an intuitive medical interface. The system processes brain MRI scans through a sophisticated preprocessing pipeline before feeding them into a modified Efficient B-3 architecture.Deployed using HuggingFace Streamlit space.",
+      "An innovative machine learning system designed to predict early-onset Alzheimer disease using MRI brain scans and achieving 98% accuracy through a combination of deep learning and traditional ML techniques. The backend is built with Python and uses  for the deep learning pipeline, while the frontend employs Streamlit for an intuitive medical interface. .",
     image: "/projects/Alzheimer.png",
     link: "https://example.com",
   },
   {
     title: "Chatbot using llama-3 ,Mistral and Gemma",
     description:
-      "An advanced multi-model chatbot platform that leverages Langchain for seamless orchestration between different language models including Llama-3, Gemma, and Mistral, accessed through HuggingFace's inference API. The interactive interface is built using Streamlit, featuring real-time model switching capabilities and conversation history tracking, while maintaining a clean and intuitive user experience. The entire application is deployed on HuggingFace Spaces for easy accessibility and scalability, allowing users to compare responses across different models and benefit from each model's unique strengths in natural language processing",
+      "An advanced multi-model chatbot platform that leverages Langchain for seamless orchestration between different language models including Llama-3, Gemma, and Mistral, accessed through HuggingFace's inference API. The interactive interface is built using Streamlit, featuring real-time model switching capabilities and conversation history tracking, while maintaining a clean and intuitive user experience. The entire application is deployed on HuggingFace's Streamlit space.",
     image: "/projects/llama.png",
     link: "https://huggingface.co/spaces/yashsarnaik23/llama3_chatbot",
   },
   {
     title: "Portfolio using HTML & CSS ",
     description:
-      "A clean and responsive portfolio website showcasing my professional journey and projects, built using pure HTML5, CSS3, and vanilla JavaScript without any additional frameworks. The site features a modern design with smooth scroll animations, dynamic project cards, and an interactive contact form, all styled using custom CSS with a focus on mobile-first responsiveness. The portfolio is hosted on Streamlit through GitHub integration, making it easily accessible and maintainable through version control, while the minimal tech stack ensures fast loading times and broad browser compatibility.",
+      "A clean and responsive portfolio website showcasing my professional journey and projects, built using pure HTML5, CSS3, and vanilla JavaScript without any additional frameworks. The site features a modern design with smooth scroll animations, dynamic project cards, and an interactive contact form, all styled using custom CSS with a focus on mobile-first responsiveness. The portfolio is hosted on Streamlit through GitHub integrat.",
     image: "/projects/portfolio.png",
     link: "https://yashsarnaik.streamlit.app/",
   },    
@@ -308,6 +308,10 @@ export const NAV_LINKS = [
     link: "#skills",
   },
   {
+    title:"Experience",
+    link: "#experience"
+  },
+  {
     title: "Projects",
     link: "#projects",
   },
@@ -315,10 +319,9 @@ export const NAV_LINKS = [
     title:"Education",
     link: "#education"
   },
-  {
-    title:"Experience",
-    link: "#experience"
-  },
+
+
+
 ] as const;
 
 
