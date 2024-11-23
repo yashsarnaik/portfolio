@@ -80,14 +80,9 @@ export const HeroContent = () => {
         variants={slideInFromRight(0.8)}
         className="w-full h-full flex justify-center items-center mt-8 lg:mt-0"
       >
-        <Image
-          src="/hero-bg.svg"
-          alt="work icons"
-          height={650}
-          width={650}
-          draggable={false}
-          className="select-none w-[280px] h-[280px] lg:w-[650px] lg:h-[650px]"
-        />
+<div
+  className="select-none w-[280px] h-[280px] lg:w-[650px] lg:h-[650px] hidden lg:block"
+></div>
       </motion.div>
     </motion.div>
   );

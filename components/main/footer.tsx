@@ -1,11 +1,13 @@
 import Link from "next/link";
-
 import { FOOTER_DATA } from "@/constants";
 
 export const Footer = () => {
   return (
-    <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-[15px]">
-      <div className="w-full flex flex-col items-center justify-center m-auto">
+    <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-[15px] relative">
+      {/* Background blur card */}
+      <div className="absolute inset-0 bg-black bg-opacity-20 backdrop-blur-sm rounded-[20px] z-0"></div>
+
+      <div className="w-full flex flex-col items-center justify-center m-auto relative z-10">
         <div className="w-full h-full flex flex-row items-center justify-around flex-wrap">
           {FOOTER_DATA.map((column) => (
             <div

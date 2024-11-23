@@ -7,7 +7,7 @@ export const Education = () => {
   return (
     <div id="education" className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl text-white font-medium text-center mb-8">Education</h2>
+        <h2 className="text-[40px] font-semibold text-white py-20 text-center mb-8">Education</h2>
         
         {/* Desktop Timeline */}
         <div className="hidden md:block relative">
@@ -84,7 +84,7 @@ export const Education = () => {
                   <span className="font-semibold">Kolhapur High School and Junior College,</span> Kolhapur
                 </p>
                 <p className="mt-4 text-gray-300 leading-relaxed">
-                  I completed my 12th HSC in Science, building a strong foundation in subjects like Physics, Chemistry, Mathematics, and Biology.
+                  I completed my 12th HSC in Science, building a strong foundation in subjects like Physics, Chemistry, Mathematics, and Biology. And started my journey in technical world.
                 </p>
               </motion.div>
             </div>
